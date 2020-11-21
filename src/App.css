@@ -1,38 +1,119 @@
-.App {
+/* Counter */
+.counter {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.counter-count {
+  width: 300px;
+  height: 300px;
+  border: 4px solid teal;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  position: relative;
+}
+.counter-count img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.counter-count span {
+  position: absolute;
+  right: 130px;
+  top: 110px;
+  color: #27251b;
+  font-size: 2.5em;
+  transform: translateX(40%);
+}
+.counter button {
+  background-color: aquamarine;
+  font-size: 1.5em;
+  box-shadow: none;
+  border: 4px solid teal;
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Quotes */
+.quotes-container {
+  padding: 0 30px;
+}
+.quotes-container h3 {
+  text-align: center;
+}
+.quotes-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  width: 600px;
+  margin: 0 auto;
+}
+.quotes-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.quotes-form input {
+  width: 250px;
+  height: 30px;
+}
+.quotes-form button {
+  height: 30px;
+  padding: 5px 25px;
+  background-color: salmon;
   color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+.quotes-item {
+  background-color: deepskyblue;
+  padding: 10px;
+  cursor: pointer;
+}
+.quotes-item.toggled {
+  background-color: crimson;
+  text-decoration: line-through;
+}
+.quotes-item h4 {
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Tabs */
+
+.tabs {
+  width: 400px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tab-panel {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: bold;
+  padding: 5px 10px 10px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  color: black;
+  cursor: pointer;
+}
+
+.tab-panel.active-tab {
+  border-color: black;
+}
+.tab-panel.disabled {
+  color: gray;
+  opacity: 0.5;
+}
+
+.tabs-list {
+  padding: 10px;
+}
+
+.tabs-list * {
+  margin: 0;
 }
